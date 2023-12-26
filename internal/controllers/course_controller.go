@@ -184,7 +184,7 @@ func (c *CourseController) CountPrice(ctx *fiber.Ctx) error {
 
 	// count price
 	response := dto.CoursePriceResponse{
-		Price: price * req.Price,
+		Price: price * req.amount,
 	}
 
 	return ctx.Status(fiber.StatusOK).JSON(fiber.Map{
