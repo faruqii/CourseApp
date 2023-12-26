@@ -158,7 +158,9 @@ func (c *CourseController) DeleteCourse(ctx *fiber.Ctx) error {
 		})
 	}
 
-	return ctx.SendStatus(fiber.StatusNoContent)
+	return ctx.Status(fiber.StatusOK).JSON(fiber.Map{
+		"message": "Course successfully deleted",
+	})
 }
 
 func (c *CourseController) CountPrice(ctx *fiber.Ctx) error {
