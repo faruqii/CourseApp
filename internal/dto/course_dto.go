@@ -30,7 +30,7 @@ type CourseUpdateRequest struct {
 }
 
 type CoursePrice struct {
-	amount int `json:"amount"`
+	Amount int `json:"amount"`
 }
 
 type CoursePriceResponse struct {
